@@ -2,36 +2,36 @@
 
 ## Description
 
-Le projet `pipex` consiste à recréer le comportement du pipe (`|`) en ligne de commande. Il permet de rediriger la sortie d'une commande vers l'entrée d'une autre, en utilisant des appels système Unix tels que `pipe`, `fork`, `dup2`, et `execve`.
+The `pipex` project involves recreating the behavior of the pipe (`|`)  in the command line. It allows redirecting the output of one command to the input of another, using system calls like `pipe`, `fork`, `dup2`, or `execve`.
 
-## Utilisation
+## Usage
 
 ### Compilation
 
-Pour compiler le projet, utilisez la commande suivante :
+To compile the project, use the following command:
 
 ```sh
 make
 ```
 
-Pour compiler la version bonus, utilisez la commande suivante :
+To compile the bonus version, use the following command:
 
 ```sh
 make bonus
 ```
 
-### Exécution
+### Execution
 
-Le programme `pipex` s'utilise de la manière suivante :
+The `pipex` program is used as follows:
 
 ```sh
 ./pipex file1 cmd1 cmd2 file2
 ```
 
-- `file1` : fichier d'entrée.
-- `cmd1` : première commande à exécuter.
-- `cmd2` : deuxième commande à exécuter.
-- `file2` : fichier de sortie.
+- `file1` : input file.
+- `cmd1` : first command to execute.
+- `cmd2` : second command to execute.
+- `file2` : output file.
 
 Exemple :
 
@@ -39,13 +39,13 @@ Exemple :
 ./pipex infile "ls -l" "grep pipex" outfile
 ```
 
-Pour la version bonus, qui supporte le mode `here_doc`, utilisez la commande suivante :
+For the bonus version, which supports the `here_doc` mode, use the following command:
 
 ```sh
 ./pipex here_doc LIMITER cmd1 cmd2 file
 ```
 
-- `LIMITER` : délimiteur pour le mode `here_doc`.
+- `LIMITER` : delimiter for `here_doc`mode.
 
 Exemple :
 
